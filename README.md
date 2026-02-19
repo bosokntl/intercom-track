@@ -1,4 +1,4 @@
-Trac Address: trac1q... (PASTE WALLET TRAC LO DI SINI BRO!)
+**Trac Address: trac17efrzhg2xnplgtkq3fl5n2y3k95l029l4yze0mjt89068xs4j6gqwcfdq9******
 
 # Intercom-Track: Fork with Simple Crypto Price Tracker
 Fork dari Trac-Systems/intercom dengan tambahan fitur crypto tracker real-time (BTC, ETH, SOL) dari CoinGecko API.
@@ -15,8 +15,6 @@ This repository is a reference implementation of the **Intercom** stack on Trac 
 
 At its core, Intercom is a **peer-to-peer (P2P) network**: peers discover each other and communicate directly (with optional relaying) over the Trac/Holepunch stack (Hyperswarm/HyperDHT + Protomux). There is no central server required for sidechannel messaging.
 
-#my wallet 
-**Trac Address: trac17efrzhg2xnplgtkq3fl5n2y3k95l029l4yze0mjt89068xs4j6gqwcfdq9**
 
 # Intercom-Track: Simple Crypto Price Tracker Fork
 Fork dari Trac-Systems/intercom dengan tambahan tracker harga crypto real-time (CoinGecko API) untuk demo agent monitoring.
