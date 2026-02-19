@@ -305,8 +305,7 @@ const scBridgeDebugRaw =
   '';
 const scBridgeDebug = parseBool(scBridgeDebugRaw, false);
 
-// Optional: override DHT bootstrap nodes (host:port list) for faster local tests.
-// Note: this affects all Hyperswarm joins (subnet replication + sidechannels).
+// Optional: override DHT bootstrap nodes
 const peerDhtBootstrapRaw =
   (flags['peer-dht-bootstrap'] && String(flags['peer-dht-bootstrap'])) ||
   (flags['dht-bootstrap'] && String(flags['dht-bootstrap'])) ||
@@ -531,3 +530,32 @@ sidechannel
 
 const terminal = new Terminal(peer);
 await terminal.start();
+
+// === SIMPLE CRYPTO TRACKER FEATURE (CUSTOM FOR BOUNTY) ===
+const axios = require('axios');
+
+async function cryptoTracker() {
+  try {
+    const coins = 'bitcoin,ethereum,solana';
+    const res = await axios.get(
+      `https://api.coingecko.com/api/v3/simple/price?ids=${coins}&vs_currencies=usd&include_24hr_change=true`
+    );
+    const data = res.data;
+    
+    console.log('\n================ CRYPTO TRACKER LIVE ================');
+    console.log(`Update: ${new Date().toLocaleString('id-ID', { timeZone: 'Asia/Jakarta' })} WIB`);
+    
+    for (const [coin, info] of Object.entries(data)) {
+      console.log(`${coin.toUpperCase()}/USD: $${info.usd.toLocaleString('id-ID')} | 24h Change: ${info.usd_24h_change?.toFixed(2) || 'N/A'}%`);
+    }
+    console.log('======================================================\n');
+  } catch (err) {
+    console.error('Crypto Tracker error:', err.message);
+  }
+}
+
+// Jalankan pertama kali dan repeat setiap 60 detik
+cryptoTracker();
+setInterval(cryptoTracker, 60000);
+
+console.log('Crypto Tracker feature activated - prices updating every 60s');
