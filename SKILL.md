@@ -728,3 +728,8 @@ Use these repos for deeper troubleshooting or protocol understanding:
 - `main_settlement_bus` (commit `5088921`): https://github.com/Trac-Systems/main_settlement_bus
 - `trac-crypto-api` (commit `b3c781d`): https://github.com/Trac-Systems/trac-crypto-api
 - `trac-wallet` (npm `1.0.1`): https://www.npmjs.com/package/trac-wallet
+## Crypto Tracker Skill
+- Fetch harga real-time BTC, ETH, SOL setiap 60 detik.
+- Output console: Harga USD + 24h change.
+- Proof: Lihat log console saat pear run (harga muncul live).
+- Extend: Agents bisa query via SC-Bridge atau sidechannel nanti.
