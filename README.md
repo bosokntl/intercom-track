@@ -4,29 +4,11 @@ This repository is a reference implementation of the **Intercom** stack on Trac 
 
 At its core, Intercom is a **peer-to-peer (P2P) network**: peers discover each other and communicate directly (with optional relaying) over the Trac/Holepunch stack (Hyperswarm/HyperDHT + Protomux). There is no central server required for sidechannel messaging.
 
-Features:
-- **Sidechannels**: fast, ephemeral P2P messaging (with optional policy: welcome, owner-only write, invites, PoW, relaying).
-- **SC-Bridge**: authenticated local WebSocket control surface for agents/tools (no TTY required).
-- **Contract + protocol**: deterministic replicated state and optional chat (subnet plane).
-- **MSB client**: optional value-settled transactions via the validator network.
+#my wallet 
+**Trac Address: trac17efrzhg2xnplgtkq3fl5n2y3k95l029l4yze0mjt89068xs4j6gqwcfdq9**
 
-Additional references: https://www.moltbook.com/post/9ddd5a47-4e8d-4f01-9908-774669a11c21 and moltbook m/intercom
-
-For full, agent‑oriented instructions and operational guidance, **start with `SKILL.md`**.  
-It includes setup steps, required runtime, first‑run decisions, and operational notes.
-
-## Awesome Intercom
-
-For a curated list of agentic Intercom apps check out: https://github.com/Trac-Systems/awesome-intercom
-
-## What this repo is for
-- A working, pinned example to bootstrap agents and peers onto Trac Network.
-- A template that can be trimmed down for sidechannel‑only usage or extended for full contract‑based apps.
-
-## How to use
-Use the **Pear runtime only** (never native node).  
-Follow the steps in `SKILL.md` to install dependencies, run the admin peer, and join peers correctly.
-
+# Intercom-Track: Simple Crypto Price Tracker Fork
+Fork dari Trac-Systems/intercom dengan tambahan tracker harga crypto real-time (CoinGecko API) untuk demo agent monitoring.
 ## Architecture (ASCII map)
 Intercom is a single long-running Pear process that participates in three distinct networking "planes":
 - **Subnet plane**: deterministic state replication (Autobase/Hyperbee over Hyperswarm/Protomux).
