@@ -1,3 +1,14 @@
+Trac Address: trac1q... (PASTE WALLET TRAC LO DI SINI BRO!)
+
+# Intercom-Track: Fork with Simple Crypto Price Tracker
+Fork dari Trac-Systems/intercom dengan tambahan fitur crypto tracker real-time (BTC, ETH, SOL) dari CoinGecko API.
+Harga + 24h change di-print ke console setiap 1 menit untuk demo.
+
+Fitur custom:
+- Live crypto price monitoring via axios + CoinGecko (no key needed).
+- Bisa di-extend ke sidechannel command "!price" atau alert agents.
+
+Cara run: pear run . --peer-store-name bosokntl-track --subnet-channel crypto-v1
 # Intercom
 
 This repository is a reference implementation of the **Intercom** stack on Trac Network for an **internet of agents**.
